@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CuentaRoblox",
+            "request": "launch",
+            "mainClass": "com.uthh.edd.unidad1.tda.CuentaRoblox",
+            "projectName": "estructura-de-datos-practicas_eeccac9d"
+        },
+        {
+            "type": "java",
             "name": "Ejecutar PruebaEntorno",
             "request": "launch",
             "mainClass": "com.uthh.edd.unidad1.arreglos.PruebaEntorno",
