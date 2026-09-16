@@ -1,0 +1,20 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Compilar proyecto Java",
+            "type": "shell",
+            "command": "powershell",
+            "args": [
+                "-NoProfile",
+                "-Command",
+                "$sources = Get-ChildItem -Path '${workspaceFolder}\\src' -Recurse -Filter *.java | Select-Object -ExpandProperty FullName; if (-not $sources) { throw 'No se encontraron fuentes Java' }; javac -encoding UTF-8 -d '${workspaceFolder}\\build\\classes' $sources"
+            ],
+            "problemMatcher": ["$javac"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
