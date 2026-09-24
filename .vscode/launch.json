@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "prueba_recurcion_arreglos",
+            "request": "launch",
+            "mainClass": "com.uthh.edd.unidad.test.prueba_recurcion_arreglos",
+            "projectName": "estructura-de-datos-practicas_eeccac9d"
+        },
+        {
+            "type": "java",
             "name": "recursvidad",
             "request": "launch",
             "mainClass": "com.uthh.edd.unidad1.recursion.recursvidad",
