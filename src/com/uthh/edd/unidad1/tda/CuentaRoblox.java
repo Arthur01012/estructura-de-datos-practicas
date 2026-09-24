@@ -1,7 +1,7 @@
 package com.uthh.edd.unidad1.tda;
 //Integrantes:
 // -Rodrigo Arturo Reyes Rodriguez
-// -Bryan Hafi
+// -Bryan Hafizi
 public class CuentaRoblox {
 
     // 1. ATRIBUTOS

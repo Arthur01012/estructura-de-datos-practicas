@@ -24,5 +24,6 @@ public class PruebaEntorno {
         System.out.println("Grupo: " + grupo);
         System.out.println("--------------");
         System.out.println("Version de Java: " + versionJava);
+        
     }
 }

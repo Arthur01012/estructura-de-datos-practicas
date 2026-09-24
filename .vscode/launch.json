@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "recursvidad",
+            "request": "launch",
+            "mainClass": "com.uthh.edd.unidad1.recursion.recursvidad",
+            "projectName": "estructura-de-datos-practicas_2b2e81ff"
+        },
+        {
+            "type": "java",
             "name": "CuentaRoblox",
             "request": "launch",
             "mainClass": "com.uthh.edd.unidad1.tda.CuentaRoblox",
