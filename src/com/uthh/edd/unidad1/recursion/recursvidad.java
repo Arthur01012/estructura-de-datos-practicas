@@ -25,8 +25,8 @@ public class recursvidad {
 
     public static void main(String[] args) {
         //System.out.println("Factoriral de 5: " + factorial(5));
-        System.out.println("Suma: " + sumar(null, 1));
-        //System.out.println("fibonacci:" + fibonacci(46));
+        //System.out.println("Suma: " + sumar(null, 1));
+        System.out.println("fibonacci:" + fibonacci(46));
     }
 
 }
