@@ -4,7 +4,7 @@ Repositorio destinado al desarrollo de prácticas de laboratorio, ejercicios y o
 
 ---
 
-=== 🛠️ Requisitos del Entorno ===
+=== Requisitos del Entorno ===
 
 -Lenguaje: Java Standard Edition (JDK 21 LTS recomendado)
 -IDE: Apache NetBeans (v17 o superior)
@@ -13,7 +13,7 @@ Repositorio destinado al desarrollo de prácticas de laboratorio, ejercicios y o
 
 ---
 
-=== 📁 Estructura del Proyecto ===
+=== Estructura del Proyecto ===
 
 El código fuente se encuentra organizado por unidades temáticas dentro del paquete base `com.uthh.edd`:
 
