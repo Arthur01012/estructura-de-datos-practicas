@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "InversorCadena",
+            "request": "launch",
+            "mainClass": "com.uthh.edd.unidad1.recursion.InversorCadena",
+            "projectName": "estructura-de-datos-practicas_2b2e81ff"
+        },
+        {
+            "type": "java",
             "name": "VerificadorOrden",
             "request": "launch",
             "mainClass": "com.uthh.edd.unidad1.recursion.VerificadorOrden",
