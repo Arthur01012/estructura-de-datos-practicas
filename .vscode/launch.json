@@ -3,6 +3,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "OrdenamientoBurbuja",
+            "request": "launch",
+            "mainClass": "com.uthh.edd.unidad1.arreglos.OrdenamientoBurbuja",
+            "projectName": "estructura-de-datos-practicas_2b2e81ff"
+        },
+        {
+            "type": "java",
+            "name": "BusquedaBinarai",
+            "request": "launch",
+            "mainClass": "com.uthh.edd.unidad1.arreglos.BusquedaBinarai",
+            "projectName": "estructura-de-datos-practicas_2b2e81ff"
+        },
+        {
+            "type": "java",
             "name": "InversorCadena",
             "request": "launch",
             "mainClass": "com.uthh.edd.unidad1.recursion.InversorCadena",
