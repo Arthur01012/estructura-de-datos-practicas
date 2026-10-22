@@ -33,7 +33,7 @@ public class OrdenamientoBurbuja {
             }
         }
     }
-
+    
     public static void main(String[] args) {
         int[] arreglo = { 64, 34, 25, 12, 22, 11, 90 };
 
@@ -41,7 +41,7 @@ public class OrdenamientoBurbuja {
         long inicio = System.nanoTime();
         ordenamientoBurbujaMejorado(arreglo);
         long fin = System.nanoTime();
-        System.err.println("Tomo en ordenar:" + (fin-inicio));
+        System.err.println("Tomo en ordenar:" + (fin - inicio));
         for (int i = 0; i < arreglo.length; i++) {
             System.out.println(arreglo[i]);
         }
