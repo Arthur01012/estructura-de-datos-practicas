@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "matrices",
+            "request": "launch",
+            "mainClass": "com.uthh.edd.unidad1.arreglos.matrices",
+            "projectName": "estructura-de-datos-practicas_2b2e81ff"
+        },
+        {
+            "type": "java",
             "name": "OrdenamientoBurbuja",
             "request": "launch",
             "mainClass": "com.uthh.edd.unidad1.arreglos.OrdenamientoBurbuja",
