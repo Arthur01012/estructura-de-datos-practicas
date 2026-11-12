@@ -1,11 +1,10 @@
 package com.uthh.edd.unidad2.listas.listas_ligadas;
 
 public class ListaEnlazada {
-private Nodo cabeza;   // primer nodo de la lista
-    private int tamanio;   // cantidad de nodos almacenados
+    private Nodo cabeza; // primer nodo de la lista
+    private int tamanio; // cantidad de nodos almacenados
 
     public ListaEnlazada() {
-        
         this.cabeza = null;
         this.tamanio = 0;
     }
@@ -21,9 +20,9 @@ private Nodo cabeza;   // primer nodo de la lista
     // Inserta al inicio. Costo: O(1)
     public void insertarInicio(int valor) {
         Nodo nuevo = new Nodo(valor);
-        nuevo.siguiente = cabeza;   // el nuevo apunta al antiguo primero
-        cabeza = nuevo;             // el nuevo pasa a ser la cabeza
-        tamanio++; 
+        nuevo.siguiente = cabeza; // el nuevo apunta al antiguo primero
+        cabeza = nuevo; // el nuevo pasa a ser la cabeza
+        tamanio++;
     }
 
     // Inserta al final. Costo: O(n)
@@ -34,7 +33,7 @@ private Nodo cabeza;   // primer nodo de la lista
         } else {
             Nodo actual = cabeza;
             while (actual.siguiente != null) {
-                actual = actual.siguiente;   // avanzar hasta el último nodo
+                actual = actual.siguiente; // avanzar hasta el último nodo
             }
             actual.siguiente = nuevo;
         }
@@ -57,16 +56,16 @@ private Nodo cabeza;   // primer nodo de la lista
         if (estaVacia()) {
             return false;
         }
-        if (cabeza.dato == valor) {       // caso 1: está en la cabeza
+        if (cabeza.dato == valor) { // caso 1: está en la cabeza
             cabeza = cabeza.siguiente;
             tamanio--;
             return true;
         }
-        Nodo anterior = cabeza;               // caso 2: está en medio o al final
+        Nodo anterior = cabeza; // caso 2: está en medio o al final
         Nodo actual = cabeza.siguiente;
         while (actual != null) {
             if (actual.dato == valor) {
-                anterior.siguiente = actual.siguiente;  // "saltar" el nodo
+                anterior.siguiente = actual.siguiente; // "saltar" el nodo
                 tamanio--;
                 return true;
             }
