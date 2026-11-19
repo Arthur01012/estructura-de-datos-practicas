@@ -3,19 +3,13 @@ package com.uthh.edd.unidad2.listas.listas_doblementeLigadas;
 //clase que recorre la lista doblemente ligada desde la cabeza hasta la cola
 public class recorrido_A {
     private nodo cabeza; // primer nodo de la lista
-    private int tamanio; // cantidad de nodos almacenados
 
     public recorrido_A() {
         this.cabeza = null;
-        this.tamanio = 0;
     }
 
     public boolean estaVacia() {
         return cabeza == null;
-    }
-
-    public int getTamanio() {
-        return tamanio;
     }
 
     public void setCabeza(nodo cabeza) {

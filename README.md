@@ -36,3 +36,10 @@ src/
         ├── arboles/        # Árboles binarios y balanceados (BST, AVL)
         ├── diccionarios/   # Tablas hash y mapeos
         └── conjuntos/      # Colecciones de conjuntos (Sets)
+
+### Lista doblemente ligada
+
+En `unidad2/listas/listas_doblementeLigadas`, cada nodo guarda un dato y dos
+referencias: `siguiente` apunta al nodo siguiente y `anterior` al nodo previo.
+La lista mantiene referencias a la cabeza y a la cola para insertar, eliminar y
+recorrer en ambos sentidos. Para probarla, ejecuta la clase `main` de ese paquete.

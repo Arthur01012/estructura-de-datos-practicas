@@ -6,17 +6,20 @@ public class main {
 public static void main(String[] args) {
          
         Scanner teclado = new Scanner(System.in);
-        ListaEnlazada lista = new ListaEnlazada();
+        operaciones lista = new operaciones();
         int opcion;
 
         do {
-            System.out.println("\n===== MENÚ LISTA LIGADA =====");
+            System.out.println("\n===== MENÚ LISTA DOBLEMENTE LIGADA =====");
             System.out.println("1. Insertar al inicio");
             System.out.println("2. Insertar al final");
             System.out.println("3. Buscar un valor");
             System.out.println("4. Eliminar un valor");
-            System.out.println("5. Mostrar la lista");
-            System.out.println("6. Ver tamaño");
+            System.out.println(".()");
+            System.out.println(".()");
+            System.out.println("5. Recorrer de cabeza a cola");
+            System.out.println("6. Recorrer de cola a cabeza");
+            System.out.println("7. Ver tamaño");
             System.out.println("0. Salir");
             System.out.print("Opción: ");
             opcion = teclado.nextInt();
@@ -45,9 +48,12 @@ public static void main(String[] args) {
                             : "No encontrado");
                     break;
                 case 5:
-                    lista.mostrar();
+                    lista.mostrarAdelante();
                     break;
                 case 6:
+                    lista.mostrarAtras();
+                    break;
+                case 7:
                     System.out.println("Tamaño: " + lista.getTamanio());
                     break;
                 case 0:

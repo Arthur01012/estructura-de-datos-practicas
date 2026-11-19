@@ -60,6 +60,7 @@ public class ListaEnlazada {
             cabeza = cabeza.siguiente;
             tamanio--;
             return true;
+            
         }
         Nodo anterior = cabeza; // caso 2: está en medio o al final
         Nodo actual = cabeza.siguiente;

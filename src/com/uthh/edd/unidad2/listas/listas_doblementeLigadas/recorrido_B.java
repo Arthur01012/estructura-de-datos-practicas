@@ -3,19 +3,14 @@ package com.uthh.edd.unidad2.listas.listas_doblementeLigadas;
 //clase que recorre la lista doblemente ligada desde la cola hasta la cabeza
 public class recorrido_B {
     private nodo cola; // último nodo de la lista
-    private int tamanio; // cantidad de nodos almacenados
+    
 
     public recorrido_B() {
         this.cola = null;
-        this.tamanio = 0;
     }
 
     public boolean estaVacia() {
         return cola == null;
-    }
-
-    public int getTamanio() {
-        return tamanio;
     }
 
     public void setCola(nodo cola) {
