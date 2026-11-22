@@ -139,5 +139,4 @@ public class listaLigada {
             }
             tamano++;                                                         //el tamaño aumnenta
         }
-
 }
