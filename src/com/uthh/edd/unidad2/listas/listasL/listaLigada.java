@@ -122,7 +122,7 @@ public class listaLigada {
             return dato;
         }
     }
-
+    //TODO: implementar el metodo de insertar ordenado
         public void insertarOrdenado(int dato) {
             nodo nuevo = new nodo(dato, null);                           //declaramos un nuevo nodo con el dato a insertar
 
