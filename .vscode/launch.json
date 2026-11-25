@@ -5,6 +5,13 @@
             "type": "java",
             "name": "main",
             "request": "launch",
+            "mainClass": "com.uthh.edd.unidad2.listas.listas_doblementeLigadas.main",
+            "projectName": "estructura-de-datos-practicas_2b2e81ff"
+        },
+        {
+            "type": "java",
+            "name": "main",
+            "request": "launch",
             "mainClass": "com.uthh.edd.unidad2.listas.listasL.main",
             "projectName": "estructura-de-datos-practicas_2b2e81ff"
         },
