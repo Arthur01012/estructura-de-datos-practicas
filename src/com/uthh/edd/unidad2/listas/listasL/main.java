@@ -1,10 +1,12 @@
 package com.uthh.edd.unidad2.listas.listasL;
 
+
+import java.io.IOException;
 import java.util.Scanner;
 
 public class main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Scanner teclado = new Scanner(System.in);
         listaLigada lista = new listaLigada();
         int opcion;
@@ -71,6 +73,9 @@ public class main {
                 System.out.println("No se pudo completar la operación: " + ex.getMessage());
             }
             System.out.println();
+            System.out.println("Press Enter to continue...");
+            System.in.read();
+            limpiarConsola();
         } while (opcion != 0);
 
         teclado.close();
@@ -105,5 +110,10 @@ public class main {
             System.out.println("Entrada no válida. Escribe un número entero.");
             teclado.next();
         }
+    }
+
+    public static void limpiarConsola() {
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
     }
 }

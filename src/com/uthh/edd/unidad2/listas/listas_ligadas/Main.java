@@ -1,11 +1,12 @@
 package com.uthh.edd.unidad2.listas.listas_ligadas;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 //* Clase principal con menú interactivo para operar ListaEnlazada.
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Scanner teclado = new Scanner(System.in);
         ListaEnlazada lista = new ListaEnlazada();
         int opcion;
@@ -58,12 +59,15 @@ public class Main {
                 System.out.println("No se pudo completar la operación: " + ex.getMessage());
             }
             System.out.println();
+            System.out.println("Press Enter to continue...");
+            System.in.read();
+            limpiarConsola();
         } while (opcion != 0);
 
         teclado.close();
     }
 
-    //* Muestra las opciones del menú agrupadas por categoría.
+    // * Muestra las opciones del menú agrupadas por categoría.
     private static void mostrarMenu() {
         System.out.println("=== LISTA LIGADA ===");
         System.out.println("CONSULTAS");
@@ -79,7 +83,7 @@ public class Main {
         System.out.println(" 0. Salir");
     }
 
-    //* Lee un número entero validando la entrada del usuario.
+    // * Lee un número entero validando la entrada del usuario.
     private static int leerEntero(Scanner teclado, String mensaje) {
         while (true) {
             System.out.print(mensaje);
@@ -89,5 +93,10 @@ public class Main {
             System.out.println("Entrada no válida. Escribe un número entero.");
             teclado.next();
         }
+    }
+
+    public static void limpiarConsola() {
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
     }
 }

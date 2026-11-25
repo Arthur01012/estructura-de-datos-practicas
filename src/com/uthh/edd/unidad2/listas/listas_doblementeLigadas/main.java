@@ -1,11 +1,12 @@
 package com.uthh.edd.unidad2.listas.listas_doblementeLigadas;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 //* Clase principal con menú interactivo y batería de pruebas para listaDoble.
 public class main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Scanner teclado = new Scanner(System.in);
         listaDoble lista = new listaDoble();
         int opcion;
@@ -94,12 +95,15 @@ public class main {
                 System.out.println("No se pudo completar la operación: " + ex.getMessage());
             }
             System.out.println();
+            System.out.println("Press Enter to continue...");
+            System.in.read();
+            limpiarConsola();
         } while (opcion != 0);
 
         teclado.close();
     }
 
-    //* Muestra las opciones del menú principal.
+    // * Muestra las opciones del menú principal.
     private static void mostrarMenu() {
         System.out.println("=== LISTA DOBLEMENTE LIGADA ===");
         System.out.println("CONSULTAS");
@@ -126,18 +130,19 @@ public class main {
         System.out.println(" 0. Salir");
     }
 
-    //* Ejecuta pruebas automáticas de todos los métodos, casos borde e impresión bidireccional.
+    // * Ejecuta pruebas automáticas de todos los métodos, casos borde e impresión
+    // bidireccional.
     private static void ejecutarBateriaPruebas() {
         System.out.println("\n--- BATERÍA DE PRUEBAS AUTOMÁTICA ---");
         listaDoble prueba = new listaDoble();
 
-        //* 1. Pruebas en lista vacía.
+        // * 1. Pruebas en lista vacía.
         System.out.println("\n1) Lista vacía:");
         imprimirEstado(prueba);
         System.out.println("eliminarUltimo() en vacía: " + prueba.eliminarUltimo());
         System.out.println("eliminarPorValor(10) en vacía: " + prueba.eliminarPorValor(10));
 
-        //* 2. Pruebas de insertarEnPosicion.
+        // * 2. Pruebas de insertarEnPosicion.
         System.out.println("\n2) insertarEnPosicion(pos, dato):");
         prueba.insertarEnPosicion(0, 20);
         prueba.insertarEnPosicion(0, 10);
@@ -145,35 +150,35 @@ public class main {
         prueba.insertarEnPosicion(2, 30);
         imprimirEstado(prueba);
 
-        //* 3. Pruebas de actualizar y obtenerNodo.
+        // * 3. Pruebas de actualizar y obtenerNodo.
         System.out.println("\n3) actualizar(1, 25) y obtenerNodo(1):");
         prueba.actualizar(1, 25);
         System.out.println("Nodo en pos 1: " + prueba.obtenerNodo(1).getDato());
         imprimirEstado(prueba);
 
-        //* 4. Pruebas de eliminarEnPosicion.
+        // * 4. Pruebas de eliminarEnPosicion.
         System.out.println("\n4) eliminarEnPosicion(pos):");
         System.out.println("Eliminado pos 1: " + prueba.eliminarEnPosicion(1));
         imprimirEstado(prueba);
         System.out.println("Eliminado pos 0: " + prueba.eliminarEnPosicion(0));
         imprimirEstado(prueba);
 
-        //* 5. Pruebas de eliminarUltimo.
+        // * 5. Pruebas de eliminarUltimo.
         System.out.println("\n5) eliminarUltimo():");
         System.out.println("eliminarUltimo() (quedan 2): " + prueba.eliminarUltimo());
         imprimirEstado(prueba);
         System.out.println("eliminarUltimo() (queda 1): " + prueba.eliminarUltimo());
         imprimirEstado(prueba);
 
-        //* 6. Pruebas de insertarOrdenado.
+        // * 6. Pruebas de insertarOrdenado.
         System.out.println("\n6) insertarOrdenado(dato):");
-        int[] valores = {30, 10, 50, 20, 40, 10, 50, 25};
+        int[] valores = { 30, 10, 50, 20, 40, 10, 50, 25 };
         for (int v : valores) {
             prueba.insertarOrdenado(v);
         }
         imprimirEstado(prueba);
 
-        //* 7. Pruebas de eliminarPorValor.
+        // * 7. Pruebas de eliminarPorValor.
         System.out.println("\n7) eliminarPorValor(x):");
         System.out.println("eliminarPorValor(10) [cabeza]: " + prueba.eliminarPorValor(10));
         System.out.println("eliminarPorValor(50) [primera ocurrencia]: " + prueba.eliminarPorValor(50));
@@ -182,7 +187,7 @@ public class main {
         System.out.println("eliminarPorValor(999) [inexistente]: " + prueba.eliminarPorValor(999));
         imprimirEstado(prueba);
 
-        //* 8. Validación de índices fuera de rango.
+        // * 8. Validación de índices fuera de rango.
         System.out.println("\n8) Validación de índices fuera de rango:");
         try {
             prueba.obtenerNodo(-1);
@@ -203,14 +208,14 @@ public class main {
         System.out.println("--- FIN DE BATERÍA DE PRUEBAS ---");
     }
 
-    //* Imprime la lista en ambos sentidos junto con su tamaño.
+    // * Imprime la lista en ambos sentidos junto con su tamaño.
     private static void imprimirEstado(listaDoble lista) {
         System.out.println("  Adelante : " + lista);
         System.out.println("  Inverso  : " + lista.toStringInverso());
         System.out.println("  Tamaño   : " + lista.getTamanio() + " | Vacía: " + lista.estaVacia());
     }
 
-    //* Lee un número entero validando la entrada del usuario.
+    // * Lee un número entero validando la entrada del usuario.
     private static int leerEntero(Scanner teclado, String mensaje) {
         while (true) {
             System.out.print(mensaje);
@@ -220,5 +225,10 @@ public class main {
             System.out.println("Entrada no válida. Escribe un número entero.");
             teclado.next();
         }
+    }
+
+    public static void limpiarConsola() {
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
     }
 }
