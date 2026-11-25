@@ -23,7 +23,7 @@ public class nodo {
 
     public void setDato(int x) {
         dato = x;
-    }
+    }   
 
     public int getDato() {
         return dato;
