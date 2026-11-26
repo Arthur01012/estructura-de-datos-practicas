@@ -10,19 +10,4 @@ public class nodo<T> {
         this.siguiente = null;
     }
 
-    public T getDato() {
-        return dato;
-    }
-
-    public nodo<T> getSiguiente() {
-        return siguiente;
-    }
-
-    public void setDato(T dato) {
-        this.dato = dato;
-    }
-
-    public void setSiguiente(nodo<T> siguiente) {
-        this.siguiente = siguiente;
-    }
 }
