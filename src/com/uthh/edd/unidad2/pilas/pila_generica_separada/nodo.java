@@ -1,25 +1,28 @@
 package com.uthh.edd.unidad2.pilas.pila_generica_separada;
 
-public class nodo {
+public class nodo<T> {
 
-    public nodo(int valor) {
+    T dato;
+    nodo<T> siguiente;
+
+    public nodo(T valor) {
+        this.dato = valor;
+        this.siguiente = null;
     }
-    int dato;
-    nodo siguiente;
 
-    public int getDato() {
+    public T getDato() {
         return dato;
     }
 
-    public nodo getSiguiente() {
+    public nodo<T> getSiguiente() {
         return siguiente;
     }
 
-    public void setDato(int dato) {
+    public void setDato(T dato) {
         this.dato = dato;
     }
 
-    public void setSiguiente(nodo siguiente) {
+    public void setSiguiente(nodo<T> siguiente) {
         this.siguiente = siguiente;
     }
 }
